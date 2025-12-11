@@ -1,0 +1,54 @@
+﻿@page "/profile"
+
+<div class="profile-container">
+    <img src="@photoPath" alt="Student Image" class="profile-img" />
+
+    <h2>@studentName</h2>
+    <p class="course">@courseName</p>
+    <p class="batch">Batch: @batchYear</p>
+</div>
+
+<style>
+    .profile-container {
+        max-width: 350px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #eee;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        margin: 10px 0 5px 0;
+        font-weight: 600;
+    }
+
+    .course {
+        font-size: 15px;
+        opacity: 0.8;
+    }
+
+    .batch {
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #444;
+    }
+</style>
+
+@code {
+    private string photoPath = "/hello.jpg";
+    private string studentName = "Rajendra Katuwal";
+    private string courseName = ".NET MAUI Hybrid Blazor App Training";
+    private string batchYear = "2025";
+}
